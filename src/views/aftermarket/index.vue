@@ -1,0 +1,3 @@
+<template>
+    fake page
+</template>

@@ -1,0 +1,172 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* #region - Typography -  */
+* {
+  font-family: "Lexend", sans-serif;
+}
+
+h1 {
+  @apply text-4xl tracking-tight font-extrabold text-accent-black sm:text-5xl md:text-6xl;
+}
+
+h2 {
+  @apply text-3xl md:text-4xl font-extrabold tracking-tight text-accent-black mb-6 md:mb-8;
+}
+
+h3 {
+  @apply text-2xl md:text-3xl font-extrabold tracking-tight text-accent-black mb-4 md:mb-6;
+}
+
+p {
+  @apply text-base text-accent-darkest leading-relaxed;
+}
+
+ul:not(.unstyled) {
+  @apply space-y-1;
+}
+
+ul:not(.unstyled) li {
+  @apply pl-4 text-black;
+}
+
+ul:not(.unstyled) li::before {
+  @apply text-accent;
+  content: "\2022";
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+/* #endregion - Typography -  */
+
+/* #region - Inputs - */
+
+a.with-underline {
+  @apply relative transition w-max hover:text-accent;
+}
+
+a.with-underline::before {
+  @apply absolute bottom-0 left-0 w-full transition;
+  content: " ";
+  height: 1px;
+  transform: translateY(2px);
+}
+
+a.with-underline:hover::before {
+  @apply bg-accent;
+  transform: translateY(-1px);
+}
+
+input[type="text"]:not(.phone-number),
+input[type="email"]:not(.text-base),
+input[type="number"],
+textarea,
+select {
+  @apply border-gray-400 focus:border-accent text-lg py-3 px-4 block w-full rounded-md;
+}
+
+.btn {
+  @apply w-max inline-flex items-center border border-transparent font-medium shadow-sm transition
+        text-white bg-accent hover:bg-accent-hover focus:outline-none focus:ring-2 
+        focus:ring-offset-2 focus:ring-accent uppercase;
+}
+
+.btn-dark {
+  @apply text-white bg-accent hover:bg-accent-hover focus:ring-accent;
+}
+
+.btn-light {
+  @apply text-accent-black bg-accent-light hover:bg-accent-light_hover;
+}
+
+.btn-xs {
+  @apply px-2.5 py-1.5 text-xs rounded;
+}
+
+.btn-sm {
+  @apply px-3 py-2 text-sm leading-4 rounded-md;
+}
+
+.btn-md {
+  @apply px-4 py-2 text-sm rounded-md;
+}
+
+.btn-lg {
+  @apply px-4 py-2 text-base rounded-md;
+}
+
+.btn-xl {
+  @apply px-4 py-2 text-base md:px-6 md:py-3 md:text-lg rounded-bl-md rounded-tr-md;
+}
+
+/* #endregion - Inputs -  */
+
+/* #region - Nav - */
+
+/* #region - Nav - */
+
+.nav-item {
+  @apply rounded-md
+              inline-flex
+              items-center
+              text-base
+              font-medium
+              capitalize
+              transition
+              hover:text-accent
+              focus:outline-none
+              focus:ring-2
+              focus:ring-offset-2
+              focus:ring-accent-light;
+}
+
+.nav-item-mobile {
+  @apply mb-1
+                    p-2
+                    flex
+                    items-center
+                    rounded-md
+                    capitalize
+                    transition
+                    hover:bg-accent-light
+                    hover:text-accent-dark;
+}
+
+.nav-item-mobile__text {
+  @apply ml-3 text-sm lg:text-base font-medium;
+}
+
+nav a {
+  @apply text-black transition;
+}
+
+nav a:hover {
+  @apply text-accent;
+}
+
+nav .router-link-active:not(.no-show-active) {
+  @apply relative;
+}
+
+nav .router-link-active:not(.no-show-active).nav-item-mobile {
+  @apply bg-accent;
+}
+
+nav .router-link-active:not(.no-show-active):not(.nav-item-mobile)::before {
+  @apply bg-accent-light;
+  content: " ";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1.5px;
+  transition: all 0.2s ease-in-out;
+  transform: translateY(2px);
+}
+
+/* #endregion */
