@@ -24,7 +24,7 @@
       be better trained, and you will be seeing a faster return on your
       investment.
     </p>
-    <h3 class="mt-7">Cement Board Production Lines</h3>
+    <h3 class="mt-10">Cement Board Production Lines</h3>
     <p>
       Gyptech can offer a continuous production line to make cement board. The
       process incorporates the latest continuous systems resulting in a high
@@ -42,7 +42,7 @@
   >
     <img src="@/assets/images/whiteBuilding.png" alt="white building" />
     <template v-slot:extra-content>
-      <ArrowList :items="content" class="mb-6" />
+      <ArrowList :items="content" class="mt-6" />
     </template>
   </Split>
 

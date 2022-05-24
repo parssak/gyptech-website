@@ -99,16 +99,16 @@ export const ROUTES_SOURCE = [
     meta: { title: "Laser Dimensioning System" }
   },
   {
-    path: "/equipment/gyptech",
+    path: "/equipment/instruments/gyptech",
     label: "Gyptech Stucco Analyzer",
-    name: "equipment/gyptech",
+    name: "equipment/instruments/gyptech",
     component: () => import("@/views/equipment/gyptech/index.vue"),
     meta: { title: "Gyptech Stucco Analyzer" }
   },
   {
-    path: "/equipment/thermal",
+    path: "/equipment/instruments/thermal",
     label: "Thermal Set Analysis",
-    name: "equipment/thermal",
+    name: "equipment/instruments/thermal",
     component: () => import("@/views/equipment/thermal/index.vue"),
     meta: { title: "Thermal Set Analysis" }
   },
@@ -131,7 +131,7 @@ export const ROUTES_SOURCE = [
     label: "aftermarket",
     name: "aftermarket",
     fake: true,
-    component: () => import("@/views/home/index.vue"),
+    component: () => import("@/views/aftermarket/overview/index.vue"),
     meta: { title: "aftermarket" }
   },
   {
@@ -167,7 +167,8 @@ export const ROUTES_SOURCE = [
     label: "form",
     name: "aftermarket/mixer/form",
     component: () => import("@/views/aftermarket/mixer/form/index.vue"),
-    meta: { title: "" }
+    meta: { title: "" },
+    hidden: true
   },
   {
     path: "/aftermarket/remote",

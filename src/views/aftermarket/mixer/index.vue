@@ -10,7 +10,10 @@
       industry. Play safe — only trust genuine Gyptech brand spare parts and
       Gyptech approved aftermarket parts.
     </p>
-    <router-link class="btn btn-xl btn-light text-color-accent-dark" :to="{ name: 'contact' }">mixer boot contact form
+    <router-link
+      class="btn btn-xl btn-light text-color-accent-dark"
+      :to="{ name: 'aftermarket/mixer/form' }"
+      >mixer boot contact form
     </router-link>
     <h2 class="pt-20">Single Mixer Boots</h2>
     <div class="grid lg:grid-cols-7">
@@ -18,7 +21,11 @@
         <img class="" src="@/assets/images/pipe.png" alt="pipe" />
       </div>
       <div class="lg:col-span-5 w-full overflow-auto">
-        <SimpleStripedTable :headers="headers" :items="items" class="object-cover" />
+        <SimpleStripedTable
+          :headers="headers"
+          :items="items"
+          class="object-cover"
+        />
       </div>
     </div>
     <h2 class="pt-8">Pant Leg Mixer Boots</h2>
@@ -27,7 +34,11 @@
         <img class="" src="@/assets/images/pipe.png" alt="pipe" />
       </div>
       <div class="lg:col-span-5 w-full overflow-auto">
-        <SimpleStripedTable :headers="headers" :items="items" class="object-cover" />
+        <SimpleStripedTable
+          :headers="headers"
+          :items="items"
+          class="object-cover"
+        />
       </div>
     </div>
     <h2 class="pt-8">Dual Stream Mixer Boots</h2>
@@ -36,7 +47,11 @@
         <img class="" src="@/assets/images/pipe.png" alt="pipe" />
       </div>
       <div class="lg:col-span-5 w-full overflow-auto">
-        <SimpleStripedTable :headers="headers" :items="items" class="object-cover" />
+        <SimpleStripedTable
+          :headers="headers"
+          :items="items"
+          class="object-cover"
+        />
       </div>
     </div>
   </Container>
@@ -44,9 +59,8 @@
 </template>
 
 <script setup>
-import SimpleStripedTable from '../../../components/app/tables/SimpleStripedTable.vue'
-import Container from '../../../components/layouts/Container.vue'
-import SplitCTA from '../../../components/layouts/cta/SplitCTA.vue'
-import Header from '../../../components/base/Header.vue'
-
+import SimpleStripedTable from "../../../components/app/tables/SimpleStripedTable.vue";
+import Container from "../../../components/layouts/Container.vue";
+import SplitCTA from "../../../components/layouts/cta/SplitCTA.vue";
+import Header from "../../../components/base/Header.vue";
 </script>

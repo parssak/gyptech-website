@@ -29,14 +29,17 @@
             flex flex-col
             items-center
             justify-center
-            md:py-20
+            md:py-24
+            lg:py-48
           "
         >
           <h2 class="text-white">
             Have a question? <br />
             We've got the answer
           </h2>
-          <button class="btn btn-xl btn-light">GET IN TOUCH</button>
+          <router-link :to="{ name: 'contact' }" class="btn btn-xl btn-light"
+            >GET IN TOUCH</router-link
+          >
         </div>
         <div
           class="
@@ -47,14 +50,21 @@
             flex flex-col
             items-center
             justify-center
-            md:py-20
+            md:py-24
+            lg:py-48
           "
         >
           <h2 class="text-white">Register for our <br />online catalog</h2>
-          <button class="btn btn-xl btn-light">LEARN MORE</button>
+          <router-link :to="{ name: 'contact' }" class="btn btn-xl btn-light">LEARN MORE</router-link>
         </div>
       </div>
     </div>
+    <img
+      src="@/assets/icons/dots.svg"
+      class="absolute bottom-0 left-0"
+      alt=""
+    />
+    <img src="@/assets/icons/dots.svg" class="absolute top-0 right-0" alt="" />
   </div>
 </template>
 

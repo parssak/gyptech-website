@@ -1,6 +1,7 @@
 <template>
   <Popover class="sticky left-0 top-0 w-full z-20 bg-white shadow">
     <div
+      v-if="showAlert"
       class="
         bg-accent-light
         py-3
@@ -18,7 +19,7 @@
           Learn More <ArrowRightIcon class="w-4=6 h-4 ml-2" />
         </button>
       </div>
-      <button class="grid items-center absolute right-4">
+      <button class="grid items-center absolute right-4" @click="toggleAlert">
         <XIcon class="w-6 h-6" />
       </button>
     </div>
@@ -165,7 +166,7 @@ import {
   PopoverPanel,
 } from "@headlessui/vue";
 import { MenuIcon, XIcon, ArrowRightIcon } from "@heroicons/vue/outline";
-
+console.debug(navigation)
 export default {
   components: {
     Popover,
@@ -179,6 +180,14 @@ export default {
   },
   setup() {
     return { navigation };
+  },
+  data() {
+    return { showAlert: true };
+  },
+  methods: {
+    toggleAlert() {
+      this.showAlert = !this.showAlert;
+    },
   },
 };
 </script>

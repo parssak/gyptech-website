@@ -21,11 +21,12 @@
     <template v-slot:extra-content>
       <ArrowList :items="content" class="mb-6" />
       <p>
-        Contact a representative for more details: <b>Call:</b>
-        <a class="text-accent" href="tel:+1 905-567-2000 ext.324"
+        Contact a representative for more details: <br />
+        <b>Call: </b>
+        <a class="text-accent" href="tel:+1 905-567-2000p324"
           >+1 905-567-2000 ext.324</a
         >
-        or <b>Email:</b>
+        or <b>Email: </b>
         <a class="text-accent" href="mailto:parts@gyptech.ca"
           >parts@gyptech.ca</a
         >

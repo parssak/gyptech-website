@@ -1,5 +1,6 @@
 <template>
   <Header />
+  <Breadcrumbs />
   <Container>
     <h2>Remote Service Agreement</h2>
     <p>
@@ -46,10 +47,10 @@
     class="pt-0 pb-0"
   >
     <template v-slot:extra-content>
-      <ArrowList :items="content" class="mb-6"
-    />
-    <p class="pb-2">
-        Contact Gyptech today to start leveraging these powerful technical support solutions. <b>Call: </b>
+      <ArrowList :items="content" class="mb-6" />
+      <p class="pb-2">
+        Contact Gyptech today to start leveraging these powerful technical
+        support solutions. <b>Call: </b>
         <a class="text-accent" href="tel:+1 905-567-2000 ext.324"
           >+1 905-567-2000 ext.324</a
         >
@@ -68,6 +69,7 @@ import Split from "../../../components/layouts/Split.vue";
 import Header from "@/components/base/Header.vue";
 import Container from "@/components/layouts/Container.vue";
 import ArrowList from "../../../components/base/ArrowList.vue";
+import Breadcrumbs from "@/components/app/steps/Breadcrumbs.vue";
 
 const content = [
   "Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, accusamus!",

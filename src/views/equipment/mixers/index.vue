@@ -4,7 +4,7 @@
   <Split title="Mixer Forming & Boardline" flip>
     <img src="@/assets/images/millwaste.png" alt="white building" />
     <template v-slot:extra-content>
-      <ArrowList :items="content" class="mb-6" />
+      <ArrowList :items="content" />
     </template>
   </Split>
   <SplitCTA />

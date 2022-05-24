@@ -3,17 +3,35 @@
     <div class="max-w-7xl mx-auto bg-accent-dark lg:bg-transparent lg:px-8">
       <div class="lg:grid lg:grid-cols-12">
         <div
-          class="relative z-10 lg:col-start-1 lg:row-start-1 lg:col-span-4 lg:py-16 lg:bg-transparent"
+          class="
+            relative
+            z-10
+            lg:col-start-1
+            lg:row-start-1
+            lg:col-span-4
+            lg:py-16
+            lg:bg-transparent
+          "
         >
           <div
             class="absolute inset-x-0 h-1/2 bg-white lg:hidden"
             aria-hidden="true"
           />
           <div
-            class="max-w-lg mx-auto px-4 sm:max-w-3xl sm:px-6 lg:max-w-none lg:p-0"
+            class="
+              max-w-lg
+              mx-auto
+              px-4
+              sm:max-w-3xl sm:px-6
+              lg:max-w-none lg:p-0
+            "
           >
             <div
-              class="aspect-w-10 aspect-h-6 sm:aspect-w-2 sm:aspect-h-1 lg:aspect-w-1"
+              class="
+                aspect-w-10 aspect-h-6
+                sm:aspect-w-2 sm:aspect-h-1
+                lg:aspect-w-1
+              "
             >
               <img
                 class="object-cover object-center rounded-lg shadow-2xl"
@@ -25,7 +43,16 @@
         </div>
 
         <div
-          class="relative bg-accent-dark lg:col-start-3 lg:row-start-1 lg:col-span-10 lg:grid lg:grid-cols-10 lg:items-center"
+          class="
+            relative
+            bg-accent-dark
+            lg:col-start-3
+            lg:row-start-1
+            lg:col-span-10
+            lg:grid
+            lg:grid-cols-10
+            lg:items-center
+          "
         >
           <div
             class="hidden absolute inset-0 overflow-hidden rounded lg:block"
@@ -37,7 +64,16 @@
               alt=""
             />
             <div
-              class="absolute bottom-0 right-0 translate-y-2/3 h-96 w-[30rem] transform rotate-180"
+              class="
+                absolute
+                bottom-0
+                right-0
+                translate-y-2/3
+                h-96
+                w-[30rem]
+                transform
+                rotate-180
+              "
             >
               <img
                 src="@/assets/icons/cicuitry.svg"
@@ -47,7 +83,16 @@
             </div>
           </div>
           <div
-            class="relative max-w-lg mx-auto py-12 px-4 space-y-6 sm:max-w-3xl sm:py-16 sm:px-6 lg:max-w-none lg:p-0 lg:col-start-4 lg:col-span-6"
+            class="
+              relative
+              max-w-lg
+              mx-auto
+              py-12
+              px-4
+              space-y-6
+              sm:max-w-3xl sm:py-16 sm:px-6
+              lg:max-w-none lg:p-0 lg:col-start-4 lg:col-span-6
+            "
           >
             <h2
               class="text-3xl font-extrabold text-white mb-4"

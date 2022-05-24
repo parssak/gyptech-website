@@ -21,6 +21,7 @@ const paths = parts.map((part, index) => {
         lg:max-w-7xl
         justify-start
         mx-auto
+        px-4
         sm:px-6
         flex
         items-center
@@ -33,7 +34,7 @@ const paths = parts.map((part, index) => {
       <router-link
         v-for="(path, index) in paths"
         :to="{ name: path.href }"
-        class="capitalize ml-2 group text-accent-darkest"
+        class="capitalize ml-2 group text-accent-darkest truncate"
       >
         <span class="mr-1"> / </span>
         <span

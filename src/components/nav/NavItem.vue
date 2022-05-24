@@ -61,11 +61,10 @@
               panel
             "
           >
-            <div
-              class="shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden border"
-            >
+            <div class="shadow-lg ring-1 ring-black ring-opacity-5 border">
               <div class="relative grid gap-6 bg-white sm:gap-2">
                 <PopoverButton class="divide-y-2">
+                  <!-- Depth 1 -->
                   <router-link
                     v-for="item in dropdownItems"
                     :key="item.label"
@@ -76,19 +75,153 @@
                       items-start
                       transition
                       hover:bg-gray-50
-                      !rounded-none
+                      group
+                      relative
                     "
                   >
                     <p
                       class="
-                        font-semibold
-                        text-base
+                        text-sm
+                        lg:text-base
+                        font-medium
                         uppercase
-                        text-accent-darkest
+                        text-black
+                        group-hover:text-accent
                       "
                     >
                       {{ item.label }}
                     </p>
+                    <svg
+                      v-if="item.dropdownItems.length > 0"
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="ml-auto h-5 w-5 group-transition"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
+                    <div
+                      v-if="item.dropdownItems.length > 0"
+                      class="
+                        absolute
+                        left-full
+                        top-0
+                        whitespace-nowrap
+                        border
+                        bg-white
+                        invisible
+                        group-hover:visible group-hover:text-black
+                        text-left
+                        divide-y-2
+                      "
+                    >
+                      <!-- Depth 2 -->
+                      <router-link
+                        v-for="inner in item.dropdownItems"
+                        :key="inner.name"
+                        :to="{ name: inner.name }"
+                        class="
+                          p-3
+                          flex
+                          items-center
+                          hover:bg-accent-lightest hover:text-accent
+                          inner-group
+                          relative
+                          group
+                        "
+                      >
+                        <span
+                          class="
+                            text-sm
+                            lg:text-base
+                            font-medium
+                            uppercase
+                            pr-3
+                          "
+                        >
+                          {{ inner.label }}
+                        </span>
+                        <svg
+                          v-if="inner.dropdownItems.length > 0"
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="ml-auto h-5 w-5"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M19 9l-7 7-7-7"
+                          />
+                        </svg>
+                        <!-- Third depth -->
+                        <div
+                          v-if="inner.dropdownItems.length > 0"
+                          class="
+                            absolute
+                            left-full
+                            top-0
+                            invisible
+                            whitespace-nowrap
+                            border
+                            bg-white
+                            transition
+                            inner-group-items
+                            group-hover:text-black
+                            text-left
+                          "
+                        >
+                          <router-link
+                            v-for="thirdInner in inner.dropdownItems"
+                            :key="thirdInner.path"
+                            :to="{ name: thirdInner.name }"
+                            class="
+                              p-3
+                              flex
+                              items-center
+                              transition
+                              hover:bg-accent-lightest hover:text-accent
+                              relative
+                            "
+                          >
+                            <span
+                              class="
+                                text-sm
+                                lg:text-base
+                                font-medium
+                                uppercase
+                                pr-3
+                              "
+                            >
+                              {{ thirdInner.label }}
+                            </span>
+                            <svg
+                              v-if="thirdInner.dropdownItems.length > 0"
+                              xmlns="http://www.w3.org/2000/svg"
+                              class="ml-auto h-5 w-5 group-transition"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke="currentColor"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M19 9l-7 7-7-7"
+                              />
+                            </svg>
+                          </router-link>
+                        </div>
+                      </router-link>
+                    </div>
                   </router-link>
                 </PopoverButton>
               </div>

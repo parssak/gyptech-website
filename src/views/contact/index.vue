@@ -12,9 +12,13 @@
         <p class="text-sm max-w-sm">
           {{ item.location }}
         </p>
-        <p class="text-sm max-w-sm pt-4">
-          <a href="tel:{{ item.phone }}">{{ item.phone }}</a>
+
+        <p class="text-sm max-w-sm pt-4" v-if="item.phone">
+          <a :href="`tel:${item.phone}`"
+            ><span class="font-medium">Tel: </span>{{ item.phone }}</a
+          >
         </p>
+
         <p class="text-sm max-w-sm pt-4">
           <a class="text-accent underline" href="mailto:{{ item.email }}">{{
             item.email
@@ -22,47 +26,59 @@
         </p>
       </div>
     </div>
-    <div class="grid place-items-center">
-      <div class="flex justify-self-auto pt-24">
-        <h2>Get In Touch</h2>
-      </div>
-      <div class="grid md:grid-cols-4 gap-8 lg:w-1/2 justify-center">
-        <div class="md:col-span-2">
+    <div class="max-w-3xl mx-auto mt-12">
+      <h2 class="text-center">Get In Touch</h2>
+      <div class="grid gap-8">
+        <div>
           <label>
             <span class="mb-0.5 inline-block"> First Name: </span>
             <input class="border-accent-darkest" name="" id="" type="text" />
           </label>
         </div>
-        <div class="md:col-span-2">
-          <span class="mb-0.5 inline-block"> Last Name: </span>
-          <input class="border-accent-darkest" name="" id="" type="text" />
+        <div>
+          <label>
+            <span class="mb-0.5 inline-block"> Last Name: </span>
+            <input class="border-accent-darkest" name="" id="" type="text" />
+          </label>
         </div>
-        <div class="md:col-span-2">
-          <span class="mb-0.5 inline-block"> Email Address: </span
-          ><input class="border-accent-darkest" name="" id="" type="email" />
+        <div>
+          <label>
+            <span class="mb-0.5 inline-block"> Email Address: </span
+            ><input class="border-accent-darkest" name="" id="" type="email" />
+          </label>
         </div>
-        <div class="md:col-span-2">
-          <span class="mb-0.5 inline-block"> Phone Number: </span>
-          <input class="border-accent-darkest" name="" id="" type="text" />
+        <div>
+          <label>
+            <span class="mb-0.5 inline-block"> Phone Number: </span>
+            <input class="border-accent-darkest" name="" id="" type="text" />
+          </label>
         </div>
-        <div class="md:col-span-2">
-          <span class="mb-0.5 inline-block"> City: </span
-          ><input class="border-accent-darkest" name="" id="" type="text" />
+        <div>
+          <label>
+            <span class="mb-0.5 inline-block"> City: </span
+            ><input class="border-accent-darkest" name="" id="" type="text" />
+          </label>
         </div>
-        <div class="md:col-span-2">
-          <span class="mb-0.5 inline-block"> Country: </span
-          ><input class="border-accent-darkest" name="" id="" type="text" />
+        <div>
+          <label>
+            <span class="mb-0.5 inline-block"> Country: </span
+            ><input class="border-accent-darkest" name="" id="" type="text" />
+          </label>
         </div>
-        <div class="md:col-span-2">
-          <span class="mb-0.5 inline-block"> Company: </span
-          ><input class="border-accent-darkest" name="" id="" type="text" />
+        <div>
+          <label>
+            <span class="mb-0.5 inline-block"> Company: </span
+            ><input class="border-accent-darkest" name="" id="" type="text" />
+          </label>
         </div>
-        <div class="md:col-span-2">
-          <span class="mb-0.5 inline-block"> Subject: </span
-          ><input class="border-accent-darkest" name="" id="" type="text" />
+        <div>
+          <label>
+            <span class="mb-0.5 inline-block"> Subject: </span
+            ><input class="border-accent-darkest" name="" id="" type="text" />
+          </label>
         </div>
 
-        <div class="md:col-span-4">
+        <div class="md:col-span-2">
           <span class="mb-0.5 inline-block"> Comments: </span
           ><textarea
             class="border-accent-darkest"
@@ -72,7 +88,7 @@
             rows="4"
           ></textarea>
         </div>
-        <div class="md:col-span-4">
+        <div class="md:col-span-2">
           <button
             class="
               bg-accent-light
@@ -114,14 +130,14 @@ const offices = [
     name: "Gyptech AB",
     address: "Norrgatan 15 Växjö, SE-352 31",
     location: "Sweden",
-    phone: "Tel: +46 470 705640",
+    phone: "+46 470 705640",
     email: "info@gyptech.se",
   },
   {
     name: "Gyptech GmbH",
     address: "Schleifmühlweg 25a 86633, Neuburg/Donau",
     location: "Germany",
-    phone: "Tel: +49 8431 5387 0",
+    phone: "+49 8431 5387 0",
     email: "info@gyptech.de",
   },
   {

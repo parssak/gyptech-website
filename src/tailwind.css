@@ -179,7 +179,6 @@ nav .router-link-active:not(.no-show-active):not(.nav-item-mobile)::before {
   left: 0;
   width: 100%;
   height: 1.5px;
-  transition: all 0.2s ease-in-out;
   transform: translateY(2px);
 }
 

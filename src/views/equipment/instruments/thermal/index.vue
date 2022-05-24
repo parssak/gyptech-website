@@ -1,6 +1,6 @@
 <template>
   <Header />
-  <Breadcrumbs />
+  <!-- <Breadcrumbs /> -->
 
   <Container>
     <h2>Quality & Analytic Instruments</h2>
@@ -20,12 +20,12 @@
       </router-link>
       <router-link
         class="btn btn-xl btn-light text-color-accent-dark"
-        :to="{ name: 'equipment/instruments/gyptech' }"
+        :to="{ name: 'equipment/gyptech' }"
         >Gyptech Stucco Analyzer
       </router-link>
       <router-link
         class="btn btn-xl btn-light text-color-accent-dark"
-        :to="{ name: 'equipment/instruments/thermal' }"
+        :to="{ name: 'equipment/thermal' }"
         >Thermal Analysis
       </router-link>
     </div>
@@ -35,8 +35,9 @@
 </template>
 
 <script setup>
-import SplitCTA from "../../../components/layouts/cta/SplitCTA.vue";
-import Container from "../../../components/layouts/Container.vue";
-import Header from "../../../components/base/Header.vue";
 import Breadcrumbs from "@/components/app/steps/Breadcrumbs.vue";
+import Header from "@/components/base/Header.vue";
+import SplitCTA from "@/components/layouts/SplitCTA.vue";
+import Container from "@/components/layouts/Container.vue";
+
 </script>
