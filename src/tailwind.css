@@ -112,7 +112,7 @@ select {
 }
 
 .btn-xl {
-  @apply px-6 py-2 text-base tracking-wider rounded-bl-md rounded-tr-md;
+  @apply px-6 py-2 text-base tracking-widest rounded-bl-md rounded-tr-md;
 }
 
 /* #endregion - Inputs -  */

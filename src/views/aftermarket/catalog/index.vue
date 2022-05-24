@@ -1,5 +1,7 @@
 <template>
   <Header />
+  <Breadcrumbs />
+
   <Split
     title="Enter the World of Gyptech Spare Parts"
     description="Gyptech equipment has countless spare parts and it can sometimes be challenging to identify each and every one. We have heard your struggles and wanted to provide a best in class catalog for you to discover all the parts you need. Getting the right part quickly can make a world of difference for your plant and now you can access this information quickly and get an OEM part at your doorstep more efficiently. The <b>Gyptech Spare Parts Catalog</b> is your answer to the common frustrations and delays you face on the job. Part information is now a click away and will take a fraction of the time to discover parts and drawings. Whether you’re trying to identify a part, find out the correct Gyptech ID number, or find a drawing, our catalog is custom designed to get the answers you need quickly and with added features to improve your day-to-day workflow."
@@ -10,26 +12,26 @@
   <Container>
     <h2>Fast and Efficient</h2>
     <ArrowList :items="content" class="mb-6" />
-    <h2>Personalized</h2>
+    <h2 class="mt-10">Personalized</h2>
     <ArrowList :items="content" class="mb-6" />
   </Container>
   <Split title="Accurate and Secure" flip>
     <img src="@/assets/images/woman-hardhat.png" alt="woman hardhat" />
     <template v-slot:extra-content>
       <ArrowList :items="content" class="mb-6" />
-      <p class="pb-2">
+      <p>
         Please reach out to us today for more information, to see a demo or to
-        get enrolled: <b>Call: </b>
-        <a class="text-accent" href="tel:+1 905-567-2000 ext.324"
-          >+1 905-567-2000 ext.324</a
-        >
-        or <b>Email: </b>
-        <a class="text-accent" href="mailto:parts@gyptech.ca"
+        get enrolled:
+        <a class="text-accent hover:underline" href="mailto:parts@gyptech.ca"
           >parts@gyptech.ca</a
+        >
+        or telephone:
+        <a class="text-accent hover:underline" href="tel:905-567-2000"
+          >905-567-2000</a
         >
       </p>
       <router-link
-        class="btn btn-xl btn-light text-color-accent-dark"
+        class="btn btn-xl btn-light text-color-accent-dark mt-4"
         :to="{ name: 'contact' }"
         >Register Now</router-link
       ></template
@@ -37,17 +39,19 @@
   </Split>
 
   <Container class="bg-accent-lightest">
-    <h3>Frequently Asked Questions</h3>
+    <h2>Frequently Asked Questions</h2>
     <div
       v-for="(f, i) in faq"
       :key="i"
-      class="grid md:grid-cols-5 gap-4 border-t border-accent-darkest/30 py-6"
+      class="grid md:grid-cols-5 gap-4 md:gap-8 border-t border-[#BED3DF] py-6"
     >
       <div class="md:col-span-2">
-        <h4 class="font-semibold">{{ f.title }}</h4>
+        <h4 class="font-medium text-lg mb-0">{{ f.title }}</h4>
       </div>
       <div class="md:col-span-3 text-accent-darkest">
-        {{ f.description }}
+        <p>
+          {{ f.description }}
+        </p>
       </div>
     </div>
   </Container>
@@ -58,6 +62,7 @@ import ArrowList from "../../../components/base/ArrowList.vue";
 import Split from "../../../components/layouts/Split.vue";
 import Container from "../../../components/layouts/Container.vue";
 import Header from "@/components/base/Header.vue";
+import Breadcrumbs from "@/components/app/steps/Breadcrumbs.vue";
 
 const content = [
   "Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, accusamus!",
