@@ -117,7 +117,7 @@
                   <router-link
                     v-for="item in navigation"
                     :key="item.label"
-                    :to="item.path"
+                    :to="{ name: item.name }"
                     class="nav-item-mobile"
                   >
                     <span class="nav-item-mobile__text">{{ item.label }}</span>

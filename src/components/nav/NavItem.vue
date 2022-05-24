@@ -21,7 +21,7 @@
           "
           @click.stop
         >
-          <router-link to="#" :disabled="true"><slot></slot></router-link>
+          <span><slot></slot></span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="ml-2 h-5 w-5 group-transition"
@@ -58,18 +58,14 @@
               max-w-sm
               sm:px-0
               lg:ml-0 lg:left-1/2 lg:-translate-x-1/2
+              panel
             "
           >
             <div
-              class="
-                rounded-lg
-                shadow-lg
-                ring-1 ring-black ring-opacity-5
-                overflow-hidden
-              "
+              class="shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden border"
             >
-              <div class="relative grid gap-6 bg-white px-2 py-3 sm:gap-2">
-                <PopoverButton>
+              <div class="relative grid gap-6 bg-white sm:gap-2">
+                <PopoverButton class="divide-y-2">
                   <router-link
                     v-for="item in dropdownItems"
                     :key="item.label"
@@ -78,18 +74,17 @@
                       p-3
                       flex
                       items-start
-                      rounded-lg
                       transition
                       hover:bg-gray-50
+                      !rounded-none
                     "
                   >
                     <p
                       class="
-                        text-sm
-                        lg:text-base
-                        font-medium
-                        capitalize
-                        text-gray-900
+                        font-semibold
+                        text-base
+                        uppercase
+                        text-accent-darkest
                       "
                     >
                       {{ item.label }}

@@ -1,6 +1,6 @@
 <template>
   <div class="relative py-16 bg-white">
-    <div class="max-w-7xl mx-auto bg-accent lg:bg-transparent lg:px-8">
+    <div class="max-w-7xl mx-auto bg-accent-dark lg:bg-transparent lg:px-8">
       <div class="lg:grid lg:grid-cols-12">
         <div
           class="relative z-10 lg:col-start-1 lg:row-start-1 lg:col-span-4 lg:py-16 lg:bg-transparent"

@@ -10,19 +10,19 @@
 }
 
 h1 {
-  @apply text-4xl tracking-tight font-extrabold text-accent-black sm:text-5xl md:text-6xl;
+  @apply text-4xl tracking-tight font-bold text-accent-black sm:text-5xl md:text-6xl;
 }
 
 h2 {
-  @apply text-3xl md:text-4xl font-extrabold tracking-tight text-accent-black mb-6 md:mb-8;
+  @apply text-3xl md:text-4xl font-semibold tracking-normal leading-snug text-accent-black mb-6 md:mb-8;
 }
 
 h3 {
-  @apply text-2xl md:text-3xl font-extrabold tracking-tight text-accent-black mb-4 md:mb-6;
+  @apply text-2xl md:text-3xl font-bold tracking-tight text-accent-black mb-4 md:mb-6;
 }
 
 p {
-  @apply text-base text-accent-darkest leading-relaxed;
+  @apply text-lg text-accent-darkest leading-relaxed font-light;
 }
 
 ul:not(.unstyled) {
@@ -111,8 +111,7 @@ select {
 /* #region - Nav - */
 
 .nav-item {
-  @apply rounded-md
-              inline-flex
+  @apply inline-flex
               items-center
               text-base
               font-medium
@@ -157,6 +156,10 @@ nav .router-link-active:not(.no-show-active).nav-item-mobile {
   @apply bg-accent;
 }
 
+nav .panel .router-link-active:not(.no-show-active):not(.nav-item-mobile) {
+  @apply bg-accent-light;
+}
+
 nav .router-link-active:not(.no-show-active):not(.nav-item-mobile)::before {
   @apply bg-accent-light;
   content: " ";
@@ -170,3 +173,12 @@ nav .router-link-active:not(.no-show-active):not(.nav-item-mobile)::before {
 }
 
 /* #endregion */
+
+.wide-underline {
+  @apply relative w-max;
+}
+
+.wide-underline::before {
+  content: "";
+  @apply h-px w-full absolute inset-x-0 bottom-0 bg-accent;
+}

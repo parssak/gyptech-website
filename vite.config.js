@@ -16,5 +16,5 @@ export default defineConfig({
   server: {
     open: true,
   },
-  base: "/template-website",
+  base: "/gyptech-website",
 });

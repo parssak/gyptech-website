@@ -8,11 +8,11 @@ export const getRoutes = (routes) => {
       component: route.component,
       name: route.name,
       meta: {
-        ...route.meta,
-      },
+        ...route.meta
+      }
     })),
     { path: "/:path(.*)", component: () => import("@/views/NotFound.vue") },
-    { path: "/", redirect: BASE_URL },
+    { path: "/", redirect: BASE_URL }
   ];
 };
 
@@ -22,19 +22,18 @@ export const getNavigation = (routes) => {
     if (route.hidden) continue;
     const baseRoute = route.path.split("/")[1];
     const indexBaseRoute = navItems.findIndex((item) => item.path === `${baseRoute}`);
-    console.debug(baseRoute, indexBaseRoute, route.path);
     if (indexBaseRoute === -1) {
       navItems.push({
         path: baseRoute,
         label: route.label,
         name: route.name,
-        dropdownItems: [],
+        dropdownItems: []
       });
     } else if (!route.path.includes(":")) {
       navItems[indexBaseRoute].dropdownItems.push({
         path: route.path,
         name: route.name,
-        label: route.label,
+        label: route.label
       });
     }
   }

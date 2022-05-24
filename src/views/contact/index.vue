@@ -3,7 +3,7 @@
   <Container>
     <h3>Our Offices</h3>
     <p class="mb-8">Gyptech has multiple offices around the globe.</p>
-    <div class="grid grid-cols-5 gap-6">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
       <div v-for="(item, index) in offices" :key="index">
         <h3 class="text-lg mb-1">{{ item.name }}</h3>
         <p class="text-sm max-w-sm">
@@ -26,43 +26,43 @@
       <div class="flex justify-self-auto pt-24">
         <h2>Get In Touch</h2>
       </div>
-      <div class="grid grid-cols-4 gap-8 w-1/2 justify-center">
-        <div class="col-span-2">
+      <div class="grid md:grid-cols-4 gap-8 lg:w-1/2 justify-center">
+        <div class="md:col-span-2">
           <label>
             <span class="mb-0.5 inline-block"> First Name: </span>
             <input class="border-accent-darkest" name="" id="" type="text" />
           </label>
         </div>
-        <div class="col-span-2">
+        <div class="md:col-span-2">
           <span class="mb-0.5 inline-block"> Last Name: </span>
           <input class="border-accent-darkest" name="" id="" type="text" />
         </div>
-        <div class="col-span-2">
+        <div class="md:col-span-2">
           <span class="mb-0.5 inline-block"> Email Address: </span
           ><input class="border-accent-darkest" name="" id="" type="email" />
         </div>
-        <div class="col-span-2">
+        <div class="md:col-span-2">
           <span class="mb-0.5 inline-block"> Phone Number: </span>
           <input class="border-accent-darkest" name="" id="" type="text" />
         </div>
-        <div class="col-span-2">
+        <div class="md:col-span-2">
           <span class="mb-0.5 inline-block"> City: </span
           ><input class="border-accent-darkest" name="" id="" type="text" />
         </div>
-        <div class="col-span-2">
+        <div class="md:col-span-2">
           <span class="mb-0.5 inline-block"> Country: </span
           ><input class="border-accent-darkest" name="" id="" type="text" />
         </div>
-        <div class="col-span-2">
+        <div class="md:col-span-2">
           <span class="mb-0.5 inline-block"> Company: </span
           ><input class="border-accent-darkest" name="" id="" type="text" />
         </div>
-        <div class="col-span-2">
+        <div class="md:col-span-2">
           <span class="mb-0.5 inline-block"> Subject: </span
           ><input class="border-accent-darkest" name="" id="" type="text" />
         </div>
 
-        <div class="col-span-4">
+        <div class="md:col-span-4">
           <span class="mb-0.5 inline-block"> Comments: </span
           ><textarea
             class="border-accent-darkest"
@@ -72,9 +72,16 @@
             rows="4"
           ></textarea>
         </div>
-        <div class="col-span-4">
+        <div class="md:col-span-4">
           <button
-            class="bg-accent-light w-full h-16 rounded-bl-md rounded-tr-md text-accent-black font-bold"
+            class="
+              bg-accent-light
+              w-full
+              h-16
+              rounded-bl-md rounded-tr-md
+              text-accent-black
+              font-bold
+            "
           >
             SEND MESSAGE
           </button>

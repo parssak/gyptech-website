@@ -10,28 +10,30 @@ With offices in North America, Europe and South America, we have been responsibl
   >
     <img src="@/assets/images/office.png" alt="office building" />
   </Split>
-  
+
   <Container>
-    <div class="bg-accent-dark text-center p-48">
+    <div class="bg-accent-dark text-center py-10 md:py-20 px-6 md:px-36 relative">
       <h2 class="text-white">Your Success is Our Success</h2>
       <p class="text-white">
         We know that dedication to our customers means more than just designing
-        great equipment. It also means ensuring that our customers have the tools
-        they need to operate their equipment effectively. That's why our highly
-        experienced teams are equipped with industry leading training programs,
-        designs built with safety in mind and controls systems that reduce
-        downtime and help to quickly identify potential problems before they
-        happen. Gyptech is committed to supplying equipment that is energy
+        great equipment. It also means ensuring that our customers have the
+        tools they need to operate their equipment effectively. That's why our
+        highly experienced teams are equipped with industry leading training
+        programs, designs built with safety in mind and controls systems that
+        reduce downtime and help to quickly identify potential problems before
+        they happen. Gyptech is committed to supplying equipment that is energy
         efficient, environmentally friendly, and cost effective. Our custom
         machinery is built for lower power consumption to reduce energy needs,
-        optimization of raw material usage including waste reclaim systems. All of
-        which ultimately save you money on operating costs. We are committed to
-        ensuring your company's cleaner, greener, more profitable future. At
+        optimization of raw material usage including waste reclaim systems. All
+        of which ultimately save you money on operating costs. We are committed
+        to ensuring your company's cleaner, greener, more profitable future. At
         Gyptech we recognize that your success is our success.
       </p>
+
+      <img src="@/assets/icons/circuitry-vertical.svg" class="absolute top-0 h-full inset-y-0 left-24 -translate-x-full" alt="">
+      <img src="@/assets/icons/circuitry-vertical.svg" class="absolute top-0 h-full inset-y-0 right-0" alt="">
     </div>
   </Container>
-  
 </template>
 
 <script setup>
