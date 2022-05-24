@@ -1,5 +1,6 @@
 <template>
   <Header />
+  <Breadcrumbs />
   <Container>
     <h2>Step Into Our Boots</h2>
     <p class="pb-4">
@@ -63,4 +64,5 @@ import SimpleStripedTable from "../../../components/app/tables/SimpleStripedTabl
 import Container from "../../../components/layouts/Container.vue";
 import SplitCTA from "../../../components/layouts/cta/SplitCTA.vue";
 import Header from "../../../components/base/Header.vue";
+import Breadcrumbs from "@/components/app/steps/Breadcrumbs.vue";
 </script>

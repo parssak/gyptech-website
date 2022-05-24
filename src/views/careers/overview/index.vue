@@ -46,36 +46,73 @@
     </template>
   </Split>
 
-  <div class="bg-accent-lightest">
+  <div class="bg-accent-lightest relative">
+    <img
+      src="@/assets/icons/dots-blue.svg"
+      class="absolute bottom-0 left-0"
+      alt=""
+    />
+    <img
+      src="@/assets/icons/dots-blue.svg"
+      class="absolute top-0 right-0"
+      alt=""
+    />
+
     <Container>
-      <h2 class="text-center mb-16">
+      <h2 class="text-center mb-16 max-w-3xl mx-auto">
         Gyptech is currently seeking candidates to fill the following positions:
       </h2>
-      <div class="grid">
-        <div
+      <div class="rounded-lg shadow-lg bg-white border divide-y-2 max-w-5xl mx-auto">
+        <router-link
+          :to="{ name: 'careers/post' }"
           v-for="(job, index) in jobs"
           :key="index"
-          class="flex flex-col bg-white p-4 border-2"
+          class="p-6 block hover:bg-accent-lightest cursor-pointer"
         >
-          <div class="flex justify-between">
-            <a class="font-bold text-accent underline">{{ job.title }}</a>
-            <div class="bg-accent rounded-md bg-opacity-50 px-2 py-1">
-              <p class="text-black">{{ job.time }}</p>
+          <div
+            class="
+              flex flex-col
+              gap-4
+              items-start
+              md:flex-row md:items-center
+              justify-between
+              mb-4
+            "
+          >
+            <a class="font-medium text-lg text-accent underline">{{
+              job.title
+            }}</a>
+            <div class="bg-[#CCE0ED] rounded-md px-3 py-1">
+              <p class="text-black text-sm font-normal">{{ job.time }}</p>
             </div>
           </div>
-          <div class="flex justify-between text-accent-darkest">
-            <div>
-              <UsersIcon class="h-4 w-4 opacity-60" />
-              {{ job.type }}
-              <LocationMarkerIcon class="h-4 w-4 opacity-60" />
-              {{ job.location }}
+          <div
+            class="
+              flex flex-col
+              gap-4
+              items-start
+              md:flex-row md:items-
+              text-accent-darkest
+            "
+          >
+            <div class="flex items-center">
+              <UsersIcon class="h-5 w-5 mr-1" />
+              <span class="text-base font-light">
+                {{ job.type }}
+              </span>
             </div>
-            <div>
-              <CalendarIcon class="h-4 w-4 opacity-60" />
+            <div class="flex items-center md:ml-6">
+              <LocationMarkerIcon class="h-5 w-5 mr-1" />
+              <span class="text-base font-light">
+                {{ job.location }}
+              </span>
+            </div>
+            <div class="md:ml-auto flex">
+              <CalendarIcon class="h-5 w-5 mr-1" />
               Closing on {{ job.date }}
             </div>
           </div>
-        </div>
+        </router-link>
       </div>
     </Container>
   </div>

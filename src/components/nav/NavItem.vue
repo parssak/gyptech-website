@@ -13,15 +13,16 @@
             items-center
             text-base
             font-medium
-            capitalize
             whitespace-nowrap
             transition
             hover:text-accent
-            focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal,
+            uppercase
+            focus:outline-none focus:ring-2 focus:ring-offset-2
+            ,
           "
           @click.stop
         >
-          <span><slot></slot></span>
+          <span class="uppercase"><slot></slot></span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="ml-2 h-5 w-5 group-transition"

@@ -15,7 +15,7 @@
                   :class="`
                     px-6
                     py-3
-                    text-left text-xs
+                    text-left text-sm
                     font-medium
                     text-offblack
                     uppercase
@@ -33,7 +33,7 @@
                 <td
                   v-for="(value, valueIdx) in Object.values(item)"
                   :key="valueIdx"
-                  :class="`px-6 py-4 whitespace-nowrap text-xs text-offblack`"
+                  :class="`px-6 py-4 whitespace-nowrap text-sm text-offblack`"
                 >
                   {{ value }}
                 </td>

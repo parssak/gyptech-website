@@ -203,22 +203,16 @@ export const ROUTES_SOURCE = [
     path: "/careers",
     label: "careers",
     name: "careers",
-    component: () => import("@/views/careers/index.vue"),
-    meta: { title: "News" }
-  },
-  {
-    path: "/careers/overview",
-    label: "careers/overview",
-    name: "careers/overview",
     component: () => import("@/views/careers/overview/index.vue"),
-    meta: { title: "Careers" }
+    meta: { title: "Careers" },
   },
   {
     path: "/careers/post",
     label: "careers/post",
     name: "careers/post",
     component: () => import("@/views/careers/post/index.vue"),
-    meta: { title: "Post" }
+    meta: { title: "Post" },
+    hidden: true
   },
   {
     path: "/contact",

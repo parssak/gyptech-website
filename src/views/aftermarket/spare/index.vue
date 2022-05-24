@@ -1,5 +1,7 @@
 <template>
   <Header />
+  <Breadcrumbs />
+
   <Split
     title="Play Safe"
     description="Genuine Gyptech spare parts are engineered to exact equipment specifications — thus ensuring precise fit, form, and reliability.  For unparalleled durability and longevity in all we manufacture, Gyptech's state-of-the-art fabrication facility uses the highest quality components, materials, and know-how.<br><br> Downtime is costly. So, why risk it with untested, substandard, generic parts? Whether you're in need of rollers, parts for your dryer or mixer, or something customized, we can help.  Play safe — only trust genuine Gyptech brand spare parts and Gyptech approved aftermarket parts."
@@ -36,15 +38,15 @@
       will meet your unique needs. Reach out to us today.
     </p>
     <h2 class="pt-8">Some of our popular spare parts, include:</h2>
-    <div class="grid grid-cols-4 gap-6">
+    <div class="grid lg:grid-cols-4 gap-6">
       <div>
         <div class="bg-accent">
           <div class="text-white p-6 h-auto">
-            <h4>Paper Delivery System</h4>
+            <h4 class="font-semibold text-xl mb-4">Paper Delivery System</h4>
             <ArrowList
               :items="[content[0], content[0]]"
               class="mb-6 text-white"
-              white
+              pure white
             />
           </div>
         </div>
@@ -52,11 +54,11 @@
       <div>
         <div class="bg-accent-dark">
           <div class="text-white p-6">
-            <h4>Paper Delivery System</h4>
+            <h4 class="font-semibold text-xl mb-4">Paper Delivery System</h4>
             <ArrowList
               :items="[content[0], content[0], content[0], content[0]]"
               class="mb-6 text-white"
-              white
+              pure white
             />
           </div>
         </div>
@@ -64,7 +66,7 @@
       <div>
         <div class="bg-accent">
           <div class="text-white p-6">
-            <h4>Board Handling System</h4>
+            <h4 class="font-semibold text-xl mb-4">Board Handling System</h4>
             <ArrowList
               :items="[
                 content[0],
@@ -75,7 +77,7 @@
                 content[0],
               ]"
               class="mb-6 text-white"
-              white
+              pure white
             />
           </div>
         </div>
@@ -83,8 +85,12 @@
       <div>
         <div class="bg-accent-dark">
           <div class="text-white p-6">
-            <h4>Dryer</h4>
-            <ArrowList :items="[content[0], content[0],content[0], content[0]]" class="mb-6" white />
+            <h4 class="font-semibold text-xl mb-4">Dryer</h4>
+            <ArrowList
+              :items="[content[0], content[0], content[0], content[0]]"
+              class="mb-6"
+              pure white
+            />
           </div>
         </div>
       </div>
@@ -116,6 +122,7 @@ import ArrowList from "../../../components/base/ArrowList.vue";
 import Header from "../../../components/base/Header.vue";
 import Split from "@/components/layouts/Split.vue";
 import Container from "@/components/layouts/Container.vue";
+import Breadcrumbs from "@/components/app/steps/Breadcrumbs.vue";
 
 const content = [
   "Lorem ipsum dolor sit amet consectetur adipisicing elit.",

@@ -67,7 +67,7 @@
       >
         <div>
           <label>
-            <span class="text-sm font-medium text-gray-700 mb-0.5 inline-block"
+            <span class="font-medium text-gray-700 mb-0.5 inline-block"
               >Inlet Size:</span
             >
             <select>
@@ -80,7 +80,7 @@
 
         <div>
           <label>
-            <span class="text-sm font-medium text-gray-700 mb-0.5 inline-block"
+            <span class="font-medium text-gray-700 mb-0.5 inline-block"
               >Outlet Size:</span
             >
             <select>
@@ -93,7 +93,7 @@
 
         <div>
           <label>
-            <span class="text-sm font-medium text-gray-700 mb-0.5 inline-block"
+            <span class="font-medium text-gray-700 mb-0.5 inline-block"
               >Overall Length:</span
             >
             <select>
@@ -106,7 +106,7 @@
 
         <div>
           <label>
-            <span class="text-sm font-medium text-gray-700 mb-0.5 inline-block"
+            <span class="font-medium text-gray-700 mb-0.5 inline-block"
               >Standard Thickness:</span
             >
             <select>

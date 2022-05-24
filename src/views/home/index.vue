@@ -64,28 +64,28 @@ const glance = [
     title: "Wallboard & plaster Plants",
     description:
       "Turnkey or upgrade, our complete solutions take you from raw gypsum to a superior finished product.",
-    path: "home",
+    path: "equipment",
   },
   {
     image: getImage("/images/fence.png"),
     title: "Why Choose Gyptech?",
     description:
       "Our plants lead the industry for a reason; superior machinery backed by seasoned professionals.",
-    path: "home",
+    path: "equipment",
   },
   {
     image: getImage("/images/fence.png"),
     title: "Gyptech Equipment",
     description:
       "We supply only equipment that adheres to our strict standard of quality and performance.",
-    path: "home",
+    path: "equipment",
   },
   {
     image: getImage("/images/fence.png"),
     title: "Gyptech Replacement Parts",
     description:
       "Gyptech is making it easier to order spare parts. Learn more about our customer service department.",
-    path: "home",
+    path: "equipment",
   },
 ];
 </script>

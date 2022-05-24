@@ -31,7 +31,7 @@
         </div>
         <div class="flex-1 bg-white p-6 flex flex-col justify-between">
           <div class="flex-1">
-            <router-link :to="post.href" class="block mt-2">
+            <router-link :to="{ name: 'news/post'}" class="block mt-2">
               <p class="text-xl font-semibold text-accent underline">
                 {{ post.title }}
               </p>
@@ -42,13 +42,13 @@
           </div>
           <div class="mt-6 flex items-center">
             <div class="flex-shrink-0">
-              <router-link :to="post.href">
+              <router-link :to="{ name: 'news/post'}">
                 <span class="sr-only">{{ post.author.name }}</span>
               </router-link>
             </div>
             <div class="ml-3">
               <p class="text-sm font-medium text-gray-900">
-                <router-link :to="post.href" class="hover:underline">
+                <router-link :to="{ name: 'news/post'}" class="hover:underline">
                   {{ post.author.name }}
                 </router-link>
               </p>

@@ -5,6 +5,8 @@ import { defineProps } from "vue";
 const props = defineProps({
   items: Array,
   white: Boolean,
+  red: Boolean,
+  pure: Boolean,
 });
 </script>
 
@@ -13,14 +15,14 @@ const props = defineProps({
     <li
       v-for="(item, index) in props.items"
       :key="index"
-      class="flex items-start text-accent-darkest font-light"
+      class="flex items-start text-accent-darkest font-light text-lg"
     >
       <ArrowCircleRightIcon
-        :class="`mr-2 w-6 h-6 flex-shrink-0 ${
-          white ? 'text-white' : 'text-accent'
+        :class="`mr-2 w-7 h-7 flex-shrink-0 ${
+          white ? 'text-white' : red ? 'text-accent-red' : 'text-accent'
         }`"
       />
-      <span>
+      <span :class="pure ? 'text-white' : ''">
         {{ item }}
       </span>
     </li>

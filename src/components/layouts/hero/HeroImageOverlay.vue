@@ -1,5 +1,5 @@
 <template>
-  <main class="relative min-h-screen">
+  <main class="relative min-h-screen -mt-16">
     <div class="absolute inset-0 w-full h-full">
       <img
         src="@/assets/images/machine.png"
@@ -12,6 +12,7 @@
     </div>
     <div class="absolute inset-0 bg-accent mix-blend-multiply"></div>
     <div class="absolute inset-0 grid items-center pb-12">
+      <slot name="background"></slot>
       <Container>
         <slot></slot>
       </Container>

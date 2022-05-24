@@ -37,11 +37,11 @@ p {
 }
 
 ul:not(.unstyled) {
-  @apply space-y-1;
+  @apply space-y-2;
 }
 
 ul:not(.unstyled) li {
-  @apply pl-4 text-black;
+  @apply pl-4 text-accent-darkest font-light;
 }
 
 ul:not(.unstyled) li::before {
@@ -126,7 +126,7 @@ select {
               items-center
               text-base
               font-medium
-              capitalize
+              uppercase
               transition
               hover:text-accent
               focus:outline-none
