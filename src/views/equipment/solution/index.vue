@@ -1,5 +1,6 @@
 <template>
   <Header />
+  <Breadcrumbs />
 
   <Split
     title="Wallboard Plants"
@@ -54,7 +55,7 @@ import ArrowList from "@/components/base/ArrowList.vue";
 import Container from "@/components/layouts/Container.vue";
 import Header from "@/components/base/Header.vue";
 import Split from "@/components/layouts/Split.vue";
-import { useRoute } from "vue-router";
+import Breadcrumbs from "@/components/app/steps/Breadcrumbs.vue";
 
 const content = [
   "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
@@ -63,6 +64,4 @@ const content = [
   "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
 ];
 
-const router = useRoute();
-console.debug(router.path);
 </script>

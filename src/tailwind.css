@@ -4,6 +4,17 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .wide-underline {
+    @apply relative w-max;
+  }
+
+  .wide-underline::before {
+    content: "";
+    @apply h-px w-full absolute inset-x-0 bottom-0 bg-accent;
+  }
+}
+
 /* #region - Typography -  */
 * {
   font-family: "Lexend", sans-serif;
@@ -101,7 +112,7 @@ select {
 }
 
 .btn-xl {
-  @apply px-4 py-2 text-base md:px-6 md:py-3 md:text-lg rounded-bl-md rounded-tr-md;
+  @apply px-6 py-2 text-base tracking-wider rounded-bl-md rounded-tr-md;
 }
 
 /* #endregion - Inputs -  */
@@ -173,12 +184,3 @@ nav .router-link-active:not(.no-show-active):not(.nav-item-mobile)::before {
 }
 
 /* #endregion */
-
-.wide-underline {
-  @apply relative w-max;
-}
-
-.wide-underline::before {
-  content: "";
-  @apply h-px w-full absolute inset-x-0 bottom-0 bg-accent;
-}

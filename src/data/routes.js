@@ -18,7 +18,7 @@ export const ROUTES_SOURCE = [
     label: "equipment",
     name: "equipment",
     fake: true,
-    component: () => import("@/views/home/index.vue"),
+    component: () => import("@/views/equipment/overview/index.vue"),
     meta: { title: "Equipment" }
   },
   {

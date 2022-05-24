@@ -1,5 +1,27 @@
 <template>
   <Popover class="sticky left-0 top-0 w-full z-20 bg-white shadow">
+    <div
+      class="
+        bg-accent-light
+        py-3
+        flex
+        items-center
+        md:justify-center
+        relative
+        pl-4
+        pr-12
+      "
+    >
+      <div class="md:flex items-center justify-center">
+        <p class="text-base text-black">Announcement Text Placeholder</p>
+        <button class="md:ml-6 uppercase font-medium flex items-center">
+          Learn More <ArrowRightIcon class="w-4=6 h-4 ml-2" />
+        </button>
+      </div>
+      <button class="grid items-center absolute right-4">
+        <XIcon class="w-6 h-6" />
+      </button>
+    </div>
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
       <div
         class="
@@ -142,7 +164,7 @@ import {
   PopoverGroup,
   PopoverPanel,
 } from "@headlessui/vue";
-import { MenuIcon, XIcon } from "@heroicons/vue/outline";
+import { MenuIcon, XIcon, ArrowRightIcon } from "@heroicons/vue/outline";
 
 export default {
   components: {
@@ -153,6 +175,7 @@ export default {
     MenuIcon,
     XIcon,
     NavItem,
+    ArrowRightIcon,
   },
   setup() {
     return { navigation };
