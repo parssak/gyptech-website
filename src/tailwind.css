@@ -128,7 +128,6 @@ select {
               font-medium
               uppercase
               transition
-              px-5
               focus:outline-none
               focus:ring-2
               focus:ring-offset-2
@@ -139,7 +138,7 @@ select {
   @apply p-3
                     flex
                     items-center
-                    capitalize
+                    uppercase
                     transition
                     hover:bg-accent-lightest;
 }

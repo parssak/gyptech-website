@@ -1,5 +1,5 @@
 <template>
-  <main class="relative min-h-screen -mt-16">
+  <main class="relative min-h-screen -mt-24">
     <div class="absolute inset-0 w-full h-full">
       <img
         src="@/assets/images/machine.png"

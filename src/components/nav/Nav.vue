@@ -1,5 +1,8 @@
 <template>
-  <Popover class="sticky left-0 top-0 w-full z-20 bg-white shadow">
+  <Popover
+    class="sticky left-0 top-0 w-full z-20 transition"
+    :class="top ? 'bg-transparent ' : 'bg-white shadow'"
+  >
     <div
       v-if="showAlert"
       class="
@@ -7,15 +10,15 @@
         py-3
         flex
         items-center
-        md:justify-center
+        lg:justify-center
         relative
         pl-4
         pr-12
       "
     >
-      <div class="md:flex items-center justify-center">
+      <div class="lg:flex items-center justify-center">
         <p class="text-base text-black">Announcement Text Placeholder</p>
-        <button class="md:ml-6 uppercase font-medium flex items-center">
+        <button class="lg:ml-6 uppercase font-medium flex items-center">
           Learn More <ArrowRightIcon class="w-4=6 h-4 ml-2" />
         </button>
       </div>
@@ -30,7 +33,7 @@
           justify-between
           items-center
           py-6
-          md:justify-start md:space-x-5
+          lg:justify-start lg:space-x-2
         "
       >
         <div class="flex justify-start items-center lg:w-0 flex-1">
@@ -41,14 +44,20 @@
                 class="h-12 w-auto flex items-center"
                 src="@/assets/logo.svg"
                 alt="Gyptech"
+                v-if="!top"
+              />
+              <img
+                class="h-12 w-auto flex items-center"
+                src="@/assets/icons/logo-white.svg"
+                alt="Gyptech"
+                v-else
               />
             </div>
           </router-link>
         </div>
-        <div class="-mr-2 -my-2 md:hidden">
+        <div class="-mr-2 -my-2 lg:hidden">
           <PopoverButton
             class="
-              rounded-md
               p-2
               inline-flex
               items-center
@@ -56,20 +65,25 @@
               text-white
               hover:text-gray-500
               transition
-              hover:bg-white
             "
+            :class="top ? 'hover:bg-accent-hover' : 'hover:bg-accent-lightest'"
           >
             <span class="sr-only">Open menu</span>
-            <MenuIcon class="h-6 w-6 text-accent" aria-hidden="true" />
+            <MenuIcon
+              class="h-6 w-6"
+              :class="top ? 'text-white' : 'text-accent'"
+              aria-hidden="true"
+            />
           </PopoverButton>
         </div>
-        <PopoverGroup as="nav" class="hidden md:flex space-x-6 xl:space-x-7">
+        <PopoverGroup as="nav" class="hidden lg:flex space-x-7 xl:space-x-7">
           <NavItem
             v-for="item in navigation"
             :route="item"
             :path="item.path"
             :key="item.label"
             :dropdownItems="item.dropdownItems"
+            :top="top"
           >
             {{ item.label }}
           </NavItem>
@@ -96,7 +110,7 @@
           transition
           transform
           origin-top-right
-          md:hidden
+          lg:hidden
         "
       >
         <div class="shadow-lg ring-1 ring-black ring-opacity-5 bg-white border">
@@ -153,7 +167,6 @@ import {
   PopoverPanel,
 } from "@headlessui/vue";
 import { MenuIcon, XIcon, ArrowRightIcon } from "@heroicons/vue/outline";
-console.debug(navigation);
 export default {
   components: {
     Popover,
@@ -168,8 +181,27 @@ export default {
   setup() {
     return { navigation };
   },
+  mounted() {
+    window.addEventListener("scroll", () => {
+      if (this.$route.name !== "aftermarket/oasis" && this.$route.name !== "home") {
+        this.top = false;
+      } else {
+        this.top = window.scrollY < 50;
+      }
+    });
+  },
   data() {
-    return { showAlert: true };
+    return { showAlert: true, top: true };
+  },
+  watch: {
+    // listen for route change
+    $route() {
+      if (this.$route.name !== "aftermarket/oasis" && this.$route.name !== "home") {
+        this.top = false;
+      } else {
+        this.top = window.scrollY < 50;
+      }
+    },
   },
   methods: {
     toggleAlert() {

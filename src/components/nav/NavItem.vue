@@ -15,14 +15,18 @@
             font-medium
             whitespace-nowrap
             transition
-            hover:text-accent
             uppercase
             focus:outline-none focus:ring-2 focus:ring-offset-2
             ,
           "
+          :class="
+            top ? 'text-white hover:text-accent-light' : 'hover:text-accent'
+          "
           @click.stop
         >
-          <span class="uppercase"><slot></slot></span>
+          <span class="uppercase" :class="top && 'text-white'"
+            ><slot></slot
+          ></span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="ml-2 h-5 w-5 group-transition"
@@ -232,7 +236,7 @@
       </Popover>
     </div>
     <div v-else class="nav-item">
-      <router-link :to="{ name: route.name }">
+      <router-link :to="{ name: route.name }" :class="top ? 'text-white hover:text-accent-light' : ''">
         <slot> </slot>
       </router-link>
     </div>
@@ -258,6 +262,10 @@ export default {
     route: {
       type: Object,
       required: true,
+    },
+    top: {
+      type: Boolean,
+      default: false,
     },
   },
 };

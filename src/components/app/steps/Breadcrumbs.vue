@@ -4,7 +4,6 @@ import { useRoute } from "vue-router";
 import { BASE_URL } from "@/data/utils";
 const router = useRoute();
 const [_, ...parts] = router.path.replace(BASE_URL, "").split("/");
-console.debug(parts);
 const paths = parts.map((part, index) => {
   return {
     href: parts.slice(0, index + 1).join("/"),
