@@ -1,5 +1,5 @@
 <template>
-  <Popover class="sticky left-0 top-0 w-full z-20 bg-white shadow ">
+  <Popover class="sticky left-0 top-0 w-full z-20 bg-white shadow">
     <div
       v-if="showAlert"
       class="
@@ -35,12 +35,12 @@
       >
         <div class="flex justify-start items-center lg:w-0 flex-1">
           <router-link :to="{ name: 'home' }">
-            <span class="sr-only">Company Name</span>
+            <span class="sr-only">Gyptech</span>
             <div class="flex items-center">
               <img
-                class="h-9 w-auto flex items-center"
+                class="h-12 w-auto flex items-center"
                 src="@/assets/logo.svg"
-                alt="Company Name"
+                alt="Gyptech"
               />
             </div>
           </router-link>
@@ -99,28 +99,15 @@
           md:hidden
         "
       >
-        <div
-          class="
-            rounded-lg
-            shadow-lg
-            ring-1 ring-black ring-opacity-5
-            bg-gray-200
-            divide-y-2 divide-gray-50
-          "
-        >
-          <div class="pt-5 pb-6 px-5">
-            <div class="flex items-center justify-between">
+        <div class="shadow-lg ring-1 ring-black ring-opacity-5 bg-white border">
+          <div class="pt-5 pb-6">
+            <div class="flex items-center justify-between px-5">
               <router-link :to="{ name: 'home' }">
-                <img
-                  class="h-5 w-auto"
-                  src="@/assets/logo.svg"
-                  alt="Company name"
-                />
+                <img class="h-9 w-auto" src="@/assets/logo.svg" alt="Gyptech" />
               </router-link>
               <div class="-mr-2">
                 <PopoverButton
                   class="
-                    rounded-md
                     p-2
                     inline-flex
                     items-center
@@ -135,8 +122,8 @@
               </div>
             </div>
             <div class="mt-6">
-              <nav class="grid gap-y-8">
-                <PopoverButton>
+              <nav class="grid">
+                <PopoverButton class="divide-y-2">
                   <router-link
                     v-for="item in navigation"
                     :key="item.label"
@@ -166,7 +153,7 @@ import {
   PopoverPanel,
 } from "@headlessui/vue";
 import { MenuIcon, XIcon, ArrowRightIcon } from "@heroicons/vue/outline";
-console.debug(navigation)
+console.debug(navigation);
 export default {
   components: {
     Popover,

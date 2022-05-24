@@ -128,7 +128,7 @@ select {
               font-medium
               uppercase
               transition
-              hover:text-accent
+              px-5
               focus:outline-none
               focus:ring-2
               focus:ring-offset-2
@@ -136,15 +136,12 @@ select {
 }
 
 .nav-item-mobile {
-  @apply mb-1
-                    p-2
+  @apply p-3
                     flex
                     items-center
-                    rounded-md
                     capitalize
                     transition
-                    hover:bg-accent-light
-                    hover:text-accent-dark;
+                    hover:bg-accent-lightest;
 }
 
 .nav-item-mobile__text {
@@ -164,7 +161,7 @@ nav .router-link-active:not(.no-show-active) {
 }
 
 nav .router-link-active:not(.no-show-active).nav-item-mobile {
-  @apply bg-accent;
+  @apply bg-accent-light;
 }
 
 nav .panel .router-link-active:not(.no-show-active):not(.nav-item-mobile) {
