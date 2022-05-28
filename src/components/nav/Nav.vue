@@ -165,7 +165,7 @@ import {
   PopoverGroup,
   PopoverPanel,
 } from "@headlessui/vue";
-import { MenuIcon, XIcon, ArrowRightIcon } from "@heroicons/vue/outline";
+import { MenuIcon, XIcon, ArrowRightIcon, } from "@heroicons/vue/outline";
 export default {
   components: {
     Popover,
