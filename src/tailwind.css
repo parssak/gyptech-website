@@ -135,12 +135,14 @@ select {
 }
 
 .nav-item-mobile {
-  @apply p-3
+  @apply mb-1 p-2
                     flex
                     items-center
-                    uppercase
+                    rounded-md
+                    capitalize
                     transition
-                    hover:bg-accent-lightest;
+                    hover:bg-accent-light
+                    hover:text-accent-dark;
 }
 
 .nav-item-mobile__text {

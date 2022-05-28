@@ -19,7 +19,7 @@
       <div class="lg:flex items-center justify-center">
         <p class="text-base text-black">Announcement Text Placeholder</p>
         <button class="lg:ml-6 uppercase font-medium flex items-center">
-          Learn More <ArrowRightIcon class="w-4=6 h-4 ml-2" />
+          Learn More <ArrowRightIcon class="w-4 h-4 ml-2" />
         </button>
       </div>
       <button class="grid items-center absolute right-4" @click="toggleAlert">
@@ -154,7 +154,6 @@
       </PopoverPanel>
     </transition>
   </Popover>
-  <!-- <div class="mb-20 pb-1" /> -->
 </template>
 
 <script>
